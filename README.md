@@ -35,6 +35,7 @@ But you are welcome to use the files in this repo to make one for yourself.
 This project uses, or relies on these great folks:
 - [MiXplorer by HootanParsa](https://xdaforums.com/t/1523691/)
 - [Programmatically Lighten or Darken a HEX Color](https://stackoverflow.com/a/57401891/14312937)
+- [Flaticon](https://www.flaticon.com/)
 
 
 ## Bug Reports
