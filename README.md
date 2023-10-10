@@ -7,7 +7,7 @@ A redesign of the HTTP File Server on MiXplorer.
 * Responsive design so it always fits the display.
 * New Header and Sidebar Nav.
 * Dark Mode and Light Mode, and a simple toggle to switch between the two.
-* Automatic detective of user device (Mobile/PC) using user agent.
+* Automatic detection of user device (Mobile/PC) using user agent.
 * Toggle to change platform (Mobile/PC) in the Sidebar.
 * Option to choose default media player based on platform (Mobile/PC).
     * **PC:** PotPlayer, VLC Player.
