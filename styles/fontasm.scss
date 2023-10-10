@@ -1,0 +1,88 @@
+$version: 20230906204850;
+
+@font-face {
+    font-family: "Fontasm";
+    src: url("fonts/fontasm.woff2?"+$version) format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin maintasm {
+    display: inline-block;
+    font: normal normal normal 1rem "Fontasm";
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.fa {
+    @include maintasm;
+
+    &.fa-mix::before {
+        content: "\E000";
+    }
+    &.fa-home::before {
+        content: "\E001";
+    }
+    &.fa-arrow-right::before {
+        content: "\E002";
+    }
+    &.fa-dawn::before {
+        content: "\E003";
+    }
+    &.fa-dusk::before {
+        content: "\E004";
+    }
+    &.fa-upload::before {
+        content: "\E005";
+    }
+    &.fa-send::before {
+        content: "\E006";
+    }
+    &.fa-loading::before {
+        content: "\E007";
+    }
+    &.fa-tick::before {
+        content: "\E008";
+    }
+    &.fa-folder::before {
+        content: "\E009";
+    }
+    &.fa-file::before {
+        content: "\E00A";
+    }
+    &.fa-platform::before {
+        content: "\E00B";
+    }
+    &.fa-player::before {
+        content: "\E00C";
+    }
+    &.fa-arrow-down::before {
+        content: "\E00D";
+    }
+    &.fa-arrow-left::before {
+        content: "\E00E";
+    }
+    &.fa-arrow-up::before {
+        content: "\E00F";
+    }
+}
+
+span.dirname::before {
+    @include maintasm;
+    content: "\E009";
+    margin-right: .75rem;
+    font-size: inherit;
+}
+
+span.filename::before {
+    @include maintasm;
+    content: "\E00A";
+    margin-right: .75rem;
+    font-size: inherit;
+}
+
+.back-link span.dirname::before {
+    content: "\E00E";
+}

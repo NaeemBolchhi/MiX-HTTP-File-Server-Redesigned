@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "Fontasm";
+  src: url("fonts/fontasm.woff2?20230906204850") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+.fa {
+  display: inline-block;
+  font: normal normal normal 1rem "Fontasm";
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.fa.fa-mix::before {
+  content: "\e000";
+}
+.fa.fa-home::before {
+  content: "\e001";
+}
+.fa.fa-arrow-right::before {
+  content: "\e002";
+}
+.fa.fa-dawn::before {
+  content: "\e003";
+}
+.fa.fa-dusk::before {
+  content: "\e004";
+}
+.fa.fa-upload::before {
+  content: "\e005";
+}
+.fa.fa-send::before {
+  content: "\e006";
+}
+.fa.fa-loading::before {
+  content: "\e007";
+}
+.fa.fa-tick::before {
+  content: "\e008";
+}
+.fa.fa-folder::before {
+  content: "\e009";
+}
+.fa.fa-file::before {
+  content: "\e00a";
+}
+.fa.fa-platform::before {
+  content: "\e00b";
+}
+.fa.fa-player::before {
+  content: "\e00c";
+}
+.fa.fa-arrow-down::before {
+  content: "\e00d";
+}
+.fa.fa-arrow-left::before {
+  content: "\e00e";
+}
+.fa.fa-arrow-up::before {
+  content: "\e00f";
+}
+
+span.dirname::before {
+  display: inline-block;
+  font: normal normal normal 1rem "Fontasm";
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e009";
+  margin-right: 0.75rem;
+  font-size: inherit;
+}
+
+span.filename::before {
+  display: inline-block;
+  font: normal normal normal 1rem "Fontasm";
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e00a";
+  margin-right: 0.75rem;
+  font-size: inherit;
+}
+
+.back-link span.dirname::before {
+  content: "\e00e";
+}/*# sourceMappingURL=fontasm.css.map */
