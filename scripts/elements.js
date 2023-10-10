@@ -215,6 +215,32 @@ function makePreview() {
 }
 makePreview();
 
+// ADD A NEW FOOTER
+function makeFooter() {
+    let footer = elemake('footer',`
+        <top class="opacity place">
+            <i class="fa fa-arrow-up"></i>
+        </top>
+        <section class="sub">
+            <a href="https://github.com/NaeemBolchhi/MiX-HTTP-File-Server-Redesigned" target="_blank">
+                <i class="fa fa-github"></i>
+                <span>NaeemBolchhi</span>
+            </a>
+        </section>
+        <section class="main">
+            <a href="https://github.com/NaeemBolchhi/MiX-HTTP-File-Server-Redesigned" target="_blank">
+                <i class="fa fa-mix"></i>
+                <span>MiXiMaX</span>
+            </a>
+            <span>|</span>
+            <a href="https://www.gnu.org/licenses/gpl-3.0-standalone.html" target="_blank">GPL-3.0</a>
+        </section>
+    `.replace(/>\s+/g,'>').replace(/\s+</g,'<'),'');
+
+    document.body.appendChild(footer);
+}
+makeFooter();
+
 // MOVE CONTENT ELEMENT TO NAV
 function moveContent() {
     let content = document.querySelector('#content'),

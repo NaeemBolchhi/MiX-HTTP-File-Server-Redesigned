@@ -321,3 +321,38 @@ function setAClass() {
 
     document.querySelector('preview').setAttribute('data-length',files3.length-1);
 }
+
+// SMOOTH SCROLL TO TOP
+function smoothTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+// QUICK SCROLL TO TOP
+function quickTop() {
+    window.scrollTo({
+        top: 0
+    });
+}
+
+// SCROLL SHOW HIDE BUTTON
+function resizeFigure() {
+    let footerHeight = document.querySelector('footer').offsetHeight,
+        topper = document.querySelector('footer top'),
+        html = document.documentElement;
+
+    if (html.clientHeight === html.scrollHeight || html.clientHeight >= html.scrollHeight - footerHeight) {
+        topper.classList.add('opacity');
+        setTimeout(function() {
+            topper.classList.add('place');
+        }, 100);
+    } else {
+        topper.classList.remove('place');
+        setTimeout(function() {
+            topper.classList.remove('opacity');
+        }, 100);
+    }
+}
+resizeFigure();

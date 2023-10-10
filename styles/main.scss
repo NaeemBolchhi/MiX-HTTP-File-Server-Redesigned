@@ -37,6 +37,10 @@ html, body {
     background: var(--mix-body-bg);
     color: var(--mix-body-text);
 }
+body {
+    display: flex;
+    flex-direction: column;
+}
 a {
     &, &:link, &:visited {
         color: var(--mix-body-text);
@@ -127,11 +131,14 @@ h3.directory {
     gap: .35rem;
     line-height: 1;
     padding: .75rem 0;
-    &.mask-right {
-        mask-image: linear-gradient(to right, black, black 20%, black 80%, transparent 100%);
+    &.mask-right:not(.mask-left) {
+        mask-image: linear-gradient(90deg, black 0%, black 20%, black 80%, transparent 100%);
     }
-    &.mask-left {
-        mask-image: linear-gradient(to left, black, black 20%, black 80%, transparent 100%);
+    &.mask-left:not(.mask-right) {
+        mask-image: linear-gradient(-90deg, black 0%, black 20%, black 80%, transparent 100%);
+    }
+    &.mask-left.mask-right {
+        mask-image: linear-gradient(90deg, transparent 0%, black 20%, black 80%, transparent 100%);
     }
     .fa {
         line-height: 1;
@@ -552,6 +559,7 @@ nav sidebar section {
 
 ul {
     --_padding: 2rem;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -753,6 +761,75 @@ preview {
             line-height: 1;
             background: var(--mix-menu-backdrop);
             border-radius: 100%;
+        }
+    }
+}
+
+footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .sub {
+        height: fit-content;
+        width: 100%;
+        background: var(--mix-header-lite);
+        padding: 0.5rem 2rem;
+        font-size: 0.8rem;
+        display: flex;
+        color: var(--mix-body-text-lite);
+        .fa {
+            margin-right: .55rem;
+        }
+        a {
+            color: var(--mix-body-text-lite);
+            &:hover, &:focus {
+                color: var(--mix-accent-2);
+            }
+        }
+    }
+    .main {
+        height: fit-content;
+        width: 100%;
+        background: var(--mix-header-bg);
+        padding: 1.25rem 2rem;
+        font-size: 0.85rem;
+        display: flex;
+        gap: .25rem;
+        .fa {
+            margin-right: .5rem;
+        }
+    }
+    top {
+        position: absolute;
+        right: 2rem;
+        bottom: 0;
+        height: 100%;
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .fa {
+            font-size: 1.5rem;
+            line-height: 1;
+            padding: .75rem;
+            background: var(--mix-body-fg);
+            border-radius: $border-radius;
+            cursor: pointer;
+            &:hover, &:focus {
+                background: var(--mix-menu-hover-bg);
+            }
+            &:active {
+                color: var(--mix-accent-1);
+                transform: translateY(-.75rem);
+            }
+        }
+        &.opacity {
+            opacity: 0;
+        }
+        &.place {
+            z-index: -100;
         }
     }
 }

@@ -1,4 +1,4 @@
-$version: 20230906204850;
+$version: 20230910191911;
 
 @font-face {
     font-family: "Fontasm";
@@ -66,6 +66,9 @@ $version: 20230906204850;
     }
     &.fa-arrow-up::before {
         content: "\E00F";
+    }
+    &.fa-github::before {
+        content: "\E010";
     }
 }
 

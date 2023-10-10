@@ -1,23 +1,9 @@
-// DIRECTORY SCROLL
-document.addEventListener('scroll', function(event) {
-    let target = event.target;
-
-    if (target.classList.contains('directory')) {
-        scrollShades();
-    }
-});
-
-/*
-directory.addEventListener('scroll', function() {
-    scrollShades();
-});
-*/
-
 // MENU CLICK
 document.addEventListener('click', function(event) {
     let target = event.target;
 
     if (target.classList.contains('menu') || target.parentNode.classList.contains('menu') || target.parentNode.parentNode.classList.contains('menu')) {
+        quickTop();
         menuClick();
     }
 });
@@ -208,6 +194,37 @@ document.addEventListener('click', function(event) {
         changePreview(1);
     }
 });
+
+// HIDE/SHOW SCROLL ARROW
+window.addEventListener('scroll', function() {
+    resizeFigure();
+});
+window.addEventListener('resize', function() {
+    resizeFigure();
+});
+
+// CLICK ARROW TOP
+document.addEventListener('click', function(event) {
+    let target = event.target;
+
+    if (target.classList.contains('fa-arrow-up') && target.parentNode.tagName.match(/top/i)) {
+        smoothTop();
+    }
+});
+
+// DIRECTORY SCROLL
+document.querySelector('.directory').addEventListener('scroll', function() {
+    scrollShades();
+});
+
+/*
+document.addEventListener('scroll', function(event) {
+    let target = event.target;
+
+    if (target.classList.contains('directory')) {
+        scrollShades();
+    }
+});*/
 
 // RUN FOR 5 SECONDS
 (function() {
