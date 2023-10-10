@@ -6,6 +6,7 @@ A redesign of the HTTP File Server on MiXplorer.
 * A complete rework of how the server looks across different devices.
 * Responsive design so it always fits the display.
 * New Header and Sidebar Nav.
+* Breadcrumb directory buttons in the Header.
 * Dark Mode and Light Mode, and a simple toggle to switch between the two.
 * Automatic detection of user device (Mobile/PC) using user agent.
 * Toggle to change platform (Mobile/PC) in the Sidebar.
@@ -14,6 +15,7 @@ A redesign of the HTTP File Server on MiXplorer.
     * **Mobile:** VLC Player, XPlayer, MX Player, MX Player Pro.
 * Built-in image viewer and Facebook-style image navigation (Previous/Next).
 * New File Upload design and animation in the Sidebar.
+* New Footer with a Scroll to Top button.
 
 
 ## Dark Mode and Light Mode
