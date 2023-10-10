@@ -1,4 +1,4 @@
-# MiXiMaX
+# MiXiMaX: MiXplorer HTTP File Server Redesigned
 A redesign of the HTTP File Server on MiXplorer.
 
 
