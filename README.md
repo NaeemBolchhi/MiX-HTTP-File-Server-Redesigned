@@ -17,7 +17,7 @@ A redesign of the HTTP File Server on MiXplorer.
 
 
 ## Dark Mode and Light Mode
-While you can switch between the two through the sidebar, you can still set a default mode in advance.
+While you can switch between the two through the sidebar, you can still set a default mode in advance by changing the port number.
 * Port number ends in ODD digit: Light mode.
     * *For example,* 8181 would default to Light mode.
 * Port number ends in EVEN digit: Dark mode.
