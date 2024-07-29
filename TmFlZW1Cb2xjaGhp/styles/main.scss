@@ -301,7 +301,6 @@ nav sidebar section {
     &.upload {
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
         line-height: 1;
         gbtn {
             display: flex;
@@ -313,17 +312,18 @@ nav sidebar section {
                 --_height2: calc(.9rem + 1rem + 1rem);
                 &:first-of-type {
                     padding: 1rem;
-                    width: calc(100% - var(--_height) - .75rem);
+                    // width: calc(100% - var(--_height) - .75rem);
+                    width: 1px;
                     display: flex;
                     align-items: center;
                     gap: .75rem;
                     background: var(--mix-body-fg);
                     border-radius: $border-radius;
                     cursor: pointer;
-                    margin-right: 1rem;
+                    // margin-right: 1rem;
                     &.grow {
                         flex: 1 0 auto;
-                        margin-right: 0;
+                        // margin-right: 0;
                     }
                     &:hover, &:focus {
                         color: var(--mix-menu-hover-text);
@@ -347,12 +347,13 @@ nav sidebar section {
                     justify-content: center;
                     background: var(--mix-body-fg);
                     border-radius: $border-radius - 1px;
+                    margin-left: 1rem;
                     &.progress {
                         height: var(--_height);
                         width: var(--_height);
                         min-height: var(--_height);
                         min-width: var(--_height);
-                        margin: 0 4px;
+                        margin: 0 4px 0 calc(1rem + 4px);
                         .fa-send, .fa-tick {
                             display: none;
                         }
@@ -382,6 +383,7 @@ nav sidebar section {
                         width: 0;
                         max-width: 0;
                         padding: 0;
+                        margin: 0;
                         overflow: hidden;
                     }
                     &:not(.progress):hover, &:not(.progress):focus {
@@ -515,6 +517,11 @@ nav sidebar section {
             &.closed {
                 height: 2.9rem !important;
             }
+            &.closed-within {
+                > btn:not(.base) {
+                    display: none;
+                }
+            }
         }
     }
 }
@@ -565,6 +572,7 @@ ul {
     gap: 2rem;
     margin: 0;
     padding: var(--_padding);
+    transition: gap 0s linear;
     section {
         --_100: calc(100svw - var(--_padding) - var(--_padding));
         display: flex;
@@ -680,10 +688,11 @@ preview {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: calc(var(--_header-height) + 2rem) 2rem 2rem 2rem;
+    // padding: calc(var(--_header-height) + 2rem) 2rem 2rem 2rem;
+    padding: 2rem;
     gap: 1rem;
     opacity: 1;
-    z-index: 3;
+    z-index: 6; //3;
     img {
         height: auto;
         width: auto;
@@ -832,4 +841,8 @@ footer {
             z-index: -100;
         }
     }
+}
+
+section.directories:not(:has(li)) {
+    display: none;
 }

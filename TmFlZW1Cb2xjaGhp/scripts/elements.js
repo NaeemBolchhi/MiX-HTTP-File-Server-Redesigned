@@ -129,6 +129,7 @@ function makeNav() {
                     <i class="fa fa-tick"></i>
                     <style type="${sessionStorage.folderCSS}">
                         section.directories li:not(.back-link) {display: none !important;}
+                        ul:not(:has(section.directories li.back-link)) {gap: 0 !important;}
                     </style>
                 </btn>
                 <btn class="file-view${sessionStorage.fileActive}">
@@ -222,7 +223,7 @@ function makeFooter() {
             <i class="fa fa-arrow-up"></i>
         </top>
         <section class="sub">
-            <a href="https://github.com/NaeemBolchhi/MiX-HTTP-File-Server-Redesigned" target="_blank">
+            <a href="https://github.com/NaeemBolchhi" target="_blank">
                 <i class="fa fa-github"></i>
                 <span>NaeemBolchhi</span>
             </a>

@@ -116,27 +116,27 @@ if (sessionStorage.cScheme === 'dawn') {
     document.head.appendChild(elemake("style",duskCSS,{"key":["type","id"],"val":["text/css","duskCSS"]}));
 }
 
-/*
-document.head.appendChild(elemake('link','',{"key":["rel","type","href"],"val":["stylesheet","text/css","http://127.0.0.1:5500/styles/cascadiacode.css"]}));
-document.head.appendChild(elemake('link','',{"key":["rel","type","href"],"val":["stylesheet","text/css","http://127.0.0.1:5500/styles/radiocanada.css"]}));
-document.head.appendChild(elemake('link','',{"key":["rel","type","href"],"val":["stylesheet","text/css","http://127.0.0.1:5500/styles/nsbengali.css"]}));
-document.head.appendChild(elemake('link','',{"key":["rel","type","href"],"val":["stylesheet","text/css","http://127.0.0.1:5500/styles/fontasm.css"]}));
-document.head.appendChild(elemake('link','',{"key":["rel","type","href"],"val":["stylesheet","text/css","http://127.0.0.1:5500/styles/main.css"]}));
-*/
+
+/* document.head.appendChild(elemake('link','',{"key":["rel","type","href"],"val":["stylesheet","text/css","http://127.0.0.1:3836/styles/cascadiacode.css"]}));
+document.head.appendChild(elemake('link','',{"key":["rel","type","href"],"val":["stylesheet","text/css","http://127.0.0.1:3836/styles/radiocanada.css"]}));
+document.head.appendChild(elemake('link','',{"key":["rel","type","href"],"val":["stylesheet","text/css","http://127.0.0.1:3836/styles/nsbengali.css"]}));
+document.head.appendChild(elemake('link','',{"key":["rel","type","href"],"val":["stylesheet","text/css","http://127.0.0.1:3836/styles/fontasm.css"]}));
+document.head.appendChild(elemake('link','',{"key":["rel","type","href"],"val":["stylesheet","text/css","http://127.0.0.1:3836/styles/main.css"]})); */
+
 
 // Run Once Flag
 sessionStorage.runOnce = false;
 
-/*
-function docEnd() {
+
+/* function docEnd() {
     if (document.readyState === "interactive" || document.readyState === "complete") {
-        document.body.appendChild(elemake("script",'',{"key":["type","src","id"],"val":["text/javascript","http://127.0.0.1:5500/scripts/elements.min.js","mixJS"]}));
-        document.body.appendChild(elemake("script",'',{"key":["type","src","id"],"val":["text/javascript","http://127.0.0.1:5500/scripts/activities.min.js","mixJS"]}));
-        document.body.appendChild(elemake("script",'',{"key":["type","src","id"],"val":["text/javascript","http://127.0.0.1:5500/scripts/listeners.min.js","mixJS"]}));
+        document.body.appendChild(elemake("script",'',{"key":["type","src","id"],"val":["text/javascript","http://127.0.0.1:3836/scripts/elements.js","mix2JS"]}));
+        document.body.appendChild(elemake("script",'',{"key":["type","src","id"],"val":["text/javascript","http://127.0.0.1:3836/scripts/activities.js","mix3JS"]}));
+        document.body.appendChild(elemake("script",'',{"key":["type","src","id"],"val":["text/javascript","http://127.0.0.1:3836/scripts/listeners.js","mix4JS"]}));
         sessionStorage.runOnce = true;
     }
-}
-*/
+} */
+
 
 function docEnd() {
     if (document.readyState === "interactive" || document.readyState === "complete") {

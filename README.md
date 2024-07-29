@@ -31,6 +31,10 @@ Releasing mods of MiXplorer is prohibited by its original developer, so I will n
 But you are welcome to use the files in this repo to make one for yourself.
 
 
+## Changelogs
+Read [changelogs](https://github.com/NaeemBolchhi/MiX-HTTP-File-Server-Redesigned/blob/main/README.md) for this project.
+
+
 ## Gratitude
 This project uses, or relies on these great folks:
 - [MiXplorer by HootanParsa](https://xdaforums.com/t/1523691/)

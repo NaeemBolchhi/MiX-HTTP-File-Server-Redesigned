@@ -304,7 +304,6 @@ nav sidebar section.theme btn.active {
 nav sidebar section.upload {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
   line-height: 1;
 }
 nav sidebar section.upload gbtn {
@@ -319,18 +318,16 @@ nav sidebar section.upload gbtn btn {
 }
 nav sidebar section.upload gbtn btn:first-of-type {
   padding: 1rem;
-  width: calc(100% - var(--_height) - 0.75rem);
+  width: 1px;
   display: flex;
   align-items: center;
   gap: 0.75rem;
   background: var(--mix-body-fg);
   border-radius: 4px;
   cursor: pointer;
-  margin-right: 1rem;
 }
 nav sidebar section.upload gbtn btn:first-of-type.grow {
   flex: 1 0 auto;
-  margin-right: 0;
 }
 nav sidebar section.upload gbtn btn:first-of-type:hover, nav sidebar section.upload gbtn btn:first-of-type:focus {
   color: var(--mix-menu-hover-text);
@@ -353,13 +350,14 @@ nav sidebar section.upload gbtn btn:last-of-type {
   justify-content: center;
   background: var(--mix-body-fg);
   border-radius: 3px;
+  margin-left: 1rem;
 }
 nav sidebar section.upload gbtn btn:last-of-type.progress {
   height: var(--_height);
   width: var(--_height);
   min-height: var(--_height);
   min-width: var(--_height);
-  margin: 0 4px;
+  margin: 0 4px 0 calc(1rem + 4px);
 }
 nav sidebar section.upload gbtn btn:last-of-type.progress .fa-send, nav sidebar section.upload gbtn btn:last-of-type.progress .fa-tick {
   display: none;
@@ -389,6 +387,7 @@ nav sidebar section.upload gbtn btn:last-of-type.hide {
   width: 0;
   max-width: 0;
   padding: 0;
+  margin: 0;
   overflow: hidden;
 }
 nav sidebar section.upload gbtn btn:last-of-type:not(.progress):hover, nav sidebar section.upload gbtn btn:last-of-type:not(.progress):focus {
@@ -512,6 +511,9 @@ nav sidebar section.pplayer gbtn.player.mark-none .sel-none .fa-tick, nav sideba
 nav sidebar section.pplayer gbtn.closed {
   height: 2.9rem !important;
 }
+nav sidebar section.pplayer gbtn.closed-within > btn:not(.base) {
+  display: none;
+}
 
 #content {
   display: block;
@@ -553,6 +555,7 @@ ul {
   gap: 2rem;
   margin: 0;
   padding: var(--_padding);
+  transition: gap 0s linear;
 }
 ul section {
   --_100: calc(100svw - var(--_padding) - var(--_padding));
@@ -664,10 +667,10 @@ preview {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: calc(var(--_header-height) + 2rem) 2rem 2rem 2rem;
+  padding: 2rem;
   gap: 1rem;
   opacity: 1;
-  z-index: 3;
+  z-index: 6;
 }
 preview, preview curtains {
   position: fixed;
@@ -822,4 +825,8 @@ footer top.opacity {
 }
 footer top.place {
   z-index: -100;
+}
+
+section.directories:not(:has(li)) {
+  display: none;
 }/*# sourceMappingURL=main.css.map */

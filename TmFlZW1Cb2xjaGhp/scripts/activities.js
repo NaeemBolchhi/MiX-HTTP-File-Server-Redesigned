@@ -88,7 +88,7 @@ function fileSelected() {
         newSend = document.querySelector('.send-files');
 
     newUp.querySelector('span').innerText = 'File: ' + oldUp.value.replace(/^.*[\\\/]/, '');
-    newUp.classList.remove('grow');
+    // newUp.classList.remove('grow');
     newSend.classList.remove('hide');
     newSend.classList.add('send');
 }
@@ -149,9 +149,12 @@ function contentShow(key, bet) {
 // CLOSE OR OPEN MENU ITEMS
 function toggleClose(key) {
     if (key.classList.contains('closed')) {
-        key.classList.remove('closed');
+        key.classList.remove('closed-within','closed');
     } else {
         key.classList.add('closed');
+        setTimeout(function() {
+            key.classList.add('closed-within');
+        }, 100);
     }
 }
 

@@ -1,14 +1,15 @@
-$version: 20230906142321;
+$version: 20240630032117;
 $fontname: "Noto Sans Bengali";
 $fname: "nsbengali";
-$fdisplay: "swap";
-$fstyle: "normal";
+$fdisplay: swap;
+$fstyle: normal;
+$fstretch: 100%;
 
 @mixin fontFace($fweight) {
     font-family: $fontname;
     font-style: $fstyle;
     font-weight: $fweight;
-    font-stretch: 100%;
+    font-stretch: $fstretch;
     font-display: $fdisplay;
     src: url("fonts/"+$fname+"-"+$fweight+".woff2?"+$version) format("woff2");
 }
