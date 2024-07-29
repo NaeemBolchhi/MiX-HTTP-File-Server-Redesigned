@@ -32,7 +32,7 @@ But you are welcome to use the files in this repo to make one for yourself.
 
 
 ## Changelogs
-Read [changelogs](https://github.com/NaeemBolchhi/MiX-HTTP-File-Server-Redesigned/blob/main/README.md) for this project.
+Read [changelogs](https://github.com/NaeemBolchhi/MiX-HTTP-File-Server-Redesigned/blob/main/CHANGELOGS.md) for this project.
 
 
 ## Gratitude
