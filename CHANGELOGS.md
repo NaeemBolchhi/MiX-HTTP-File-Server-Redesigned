@@ -2,7 +2,7 @@
 A redesign of the HTTP File Server on MiXplorer.
 
 
-## Changelog
+## Changelogs
 
 
 ### v1.1 - 20240630041821
