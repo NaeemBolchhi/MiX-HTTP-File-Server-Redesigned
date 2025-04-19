@@ -195,6 +195,28 @@ document.addEventListener('click', function(event) {
     }
 });
 
+// KEYBOARD SHORTCUTS
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
+        try {
+            document.querySelector('preview:not(.hide):not(.none):not(.no-prev) .prev-image').click();
+        } catch {}
+    }
+    if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
+        try {
+            document.querySelector('preview:not(.hide):not(.none):not(.no-next) .next-image').click();
+        } catch {}
+    }
+    if (event.key === "Escape") {
+        try {
+            document.querySelector('preview:not(.hide):not(.none):not(.no-prev) curtains').click();
+        } catch {}
+        try {
+            document.querySelector('header section.main .menu.aight').click();
+        } catch {}
+    }
+});
+
 // HIDE/SHOW SCROLL ARROW
 window.addEventListener('scroll', function() {
     resizeFigure();

@@ -5,6 +5,13 @@ A redesign of the HTTP File Server on MiXplorer.
 ## Changelogs
 
 
+### v1.2 - 20250320000504
+* Added some keyboard shortcuts.
+    * In the image viewer, move to the previous/next image using left/right, or up/down Arrow keys on the keyboard.
+    * Exit image viewer with the Escape key.
+    * Close the sidebar with the Escape key.
+
+
 ### v1.1 - 20240630041821
 * Fixed upload bar overflow.
 * Fixed extra gap above files when folders are hidden.
