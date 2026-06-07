@@ -560,8 +560,8 @@ nav sidebar section {
 
 @mixin columnWidth($num) {
     $divider: $num - 1;
-    width: calc((var(--_100) - #{$divider}rem) / #{$num});
-    --_col-width: calc((var(--_100) - #{$divider}rem) / #{$num});
+    width: calc((100% - #{$divider}rem) / #{$num});
+    --_col-width: calc((100% - #{$divider}rem) / #{$num});
 }
 
 ul {
@@ -574,12 +574,11 @@ ul {
     padding: var(--_padding);
     transition: gap 0s linear;
     section {
-        --_100: calc(100svw - var(--_padding) - var(--_padding));
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         gap: 1rem;
-        width: var(--_100);
+        width: 100%;
         li {
             padding: 0;
             margin: 0;
@@ -618,55 +617,27 @@ ul {
                     color: var(--mix-body-text-lite);
                 }
                 .dirname {
-                    width: calc(var(--_col-width) - 2rem);
+                    width: 100%;
                 }
                 .filename {
-                    width: calc(var(--_100) - 10rem);
+                    width: calc(100% - 10rem);
                 }
             }
         }
         &.directories li {
             @include columnWidth(5);
             &.back-link {
-                width: 100%;
-                a {
-                    width: var(--_col-width);
-                }
-                + li,
-                + li + li,
-                + li + li + li,
-                + li + li + li + li,
-                + li + li + li + li + li {
-                    margin-top: 1rem;
-                }
+                margin-right: calc(100% - var(--_col-width));
+                margin-bottom: 1rem;
             }
             @media screen and (max-width: $width-limit) {
                 @include columnWidth(4);
-                &.back-link {
-                    + li + li + li + li + li {
-                        margin-top: 0;
-                    }
-                }
             }
             @media screen and (max-width: $mobile-width) {
                 @include columnWidth(3);
-                &.back-link {
-                    + li + li + li + li,
-                    + li + li + li + li + li {
-                        margin-top: 0;
-                    }
-                }
             }
             @media screen and (max-width: $mobile-mid) {
                 @include columnWidth(1);
-                &.back-link {
-                    + li + li,
-                    + li + li + li,
-                    + li + li + li + li,
-                    + li + li + li + li + li {
-                        margin-top: 0;
-                    }
-                }
             }
         }
         &.files li {

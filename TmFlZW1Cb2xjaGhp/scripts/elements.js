@@ -234,7 +234,7 @@ function makeFooter() {
                 <span>MiXiMaX</span>
             </a>
             <span>|</span>
-            <a href="https://www.gnu.org/licenses/gpl-3.0-standalone.html" target="_blank">GPL-3.0</a>
+            <a href="https://www.gnu.org/licenses/agpl-3.0-standalone.html" target="_blank">AGPL-3.0</a>
         </section>
     `.replace(/>\s+/g,'>').replace(/\s+</g,'<'),'');
 

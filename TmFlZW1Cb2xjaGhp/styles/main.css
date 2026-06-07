@@ -244,8 +244,7 @@ nav sidebar {
 nav backdrop {
   opacity: 1;
   background: var(--mix-menu-backdrop);
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
   transition: opacity 0.2s linear;
   z-index: 1;
 }
@@ -558,12 +557,11 @@ ul {
   transition: gap 0s linear;
 }
 ul section {
-  --_100: calc(100svw - var(--_padding) - var(--_padding));
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 1rem;
-  width: var(--_100);
+  width: 100%;
 }
 ul section li {
   padding: 0;
@@ -605,73 +603,42 @@ ul section li a .filesize {
   color: var(--mix-body-text-lite);
 }
 ul section li a .dirname {
-  width: calc(var(--_col-width) - 2rem);
-}
-ul section li a .filename {
-  width: calc(var(--_100) - 10rem);
-}
-ul section.directories li {
-  width: calc((var(--_100) - 4rem) / 5);
-  --_col-width: calc((var(--_100) - 4rem) / 5);
-}
-ul section.directories li.back-link {
   width: 100%;
 }
-ul section.directories li.back-link a {
-  width: var(--_col-width);
+ul section li a .filename {
+  width: calc(100% - 10rem);
 }
-ul section.directories li.back-link + li,
-ul section.directories li.back-link + li + li,
-ul section.directories li.back-link + li + li + li,
-ul section.directories li.back-link + li + li + li + li,
-ul section.directories li.back-link + li + li + li + li + li {
-  margin-top: 1rem;
+ul section.directories li {
+  width: calc((100% - 4rem) / 5);
+  --_col-width: calc((100% - 4rem) / 5);
+}
+ul section.directories li.back-link {
+  margin-right: calc(100% - var(--_col-width));
+  margin-bottom: 1rem;
 }
 @media screen and (max-width: 1200px) {
   ul section.directories li {
-    width: calc((var(--_100) - 3rem) / 4);
-    --_col-width: calc((var(--_100) - 3rem) / 4);
-  }
-  ul section.directories li.back-link + li + li + li + li + li {
-    margin-top: 0;
+    width: calc((100% - 3rem) / 4);
+    --_col-width: calc((100% - 3rem) / 4);
   }
 }
 @media screen and (max-width: 760px) {
   ul section.directories li {
-    width: calc((var(--_100) - 2rem) / 3);
-    --_col-width: calc((var(--_100) - 2rem) / 3);
-  }
-  ul section.directories li.back-link + li + li + li + li,
-  ul section.directories li.back-link + li + li + li + li + li {
-    margin-top: 0;
+    width: calc((100% - 2rem) / 3);
+    --_col-width: calc((100% - 2rem) / 3);
   }
 }
 @media screen and (max-width: 550px) {
   ul section.directories li {
-    width: calc((var(--_100) - 0rem) / 1);
-    --_col-width: calc((var(--_100) - 0rem) / 1);
-  }
-  ul section.directories li.back-link + li + li,
-  ul section.directories li.back-link + li + li + li,
-  ul section.directories li.back-link + li + li + li + li,
-  ul section.directories li.back-link + li + li + li + li + li {
-    margin-top: 0;
+    width: calc((100% - 0rem) / 1);
+    --_col-width: calc((100% - 0rem) / 1);
   }
 }
 ul section.files li {
-  width: calc((var(--_100) - 0rem) / 1);
-  --_col-width: calc((var(--_100) - 0rem) / 1);
+  width: calc((100% - 0rem) / 1);
+  --_col-width: calc((100% - 0rem) / 1);
 }
 
-preview {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  gap: 1rem;
-  opacity: 1;
-  z-index: 6;
-}
 preview, preview curtains {
   position: fixed;
   top: 0;
@@ -680,6 +647,15 @@ preview, preview curtains {
   width: 100%;
   min-height: 100%;
   min-width: 100%;
+}
+preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1rem;
+  opacity: 1;
+  z-index: 6;
 }
 preview img {
   height: auto;
@@ -691,8 +667,7 @@ preview img {
 }
 preview curtains {
   background: var(--mix-menu-backdrop);
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
   z-index: 1;
 }
 preview.hide {

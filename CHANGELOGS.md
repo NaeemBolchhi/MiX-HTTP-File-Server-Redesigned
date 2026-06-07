@@ -5,6 +5,12 @@ A redesign of the HTTP File Server on MiXplorer.
 ## Changelogs
 
 
+### v1.3 - 20260507142125
+* Updated width calculation.
+    * Previously used svw, which caused recalculation issues sometimes. Moved to percentage based values instead.
+    * Updated license declaration in the footer. Project is now AGPL-3.0.
+
+
 ### v1.2 - 20250320000504
 * Added some keyboard shortcuts.
     * In the image viewer, move to the previous/next image using left/right, or up/down Arrow keys on the keyboard.
